@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Conversor de Kilómetros a Otras Unidades
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="fondo">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Conversor de Kilómetros a Otras Unidades</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-item>
+      <ion-label position="floating">Kilómetros</ion-label>
+      <ion-input type="number" [(ngModel)]="kilometros"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="convertirUnidades()" id="button">Convertir</ion-button>
+
+    <ion-item>
+      <ion-label>Millas:</ion-label>
+      <ion-text>{{ millas }} mi</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Yardas:</ion-label>
+      <ion-text>{{ yardas }} yd</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pies:</ion-label>
+      <ion-text>{{ pies }} ft</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pulgadas:</ion-label>
+      <ion-text>{{ pulgadas }} in</ion-text>
+    </ion-item>
+
+    <h2>{{ txtMensaje }}</h2>
+  </div>
+</ion-content>
