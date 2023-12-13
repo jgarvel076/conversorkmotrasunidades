@@ -28,6 +28,18 @@ export class HomePage {
     } else {
       this.txtMensaje = "Por favor, ingrese una cantidad en kilómetros.";
     }
+    this.avisoUnidades();
+  }
+
+  avisoUnidades() { 
+    console.log("entra")
+    if(this.kilometros > 100){
+      console.log("Kilometros mayor que 100");
+      this.txtMensaje = ("Recuerde revisar su vehiculo para no tener problemas");
+    } else if(this.kilometros < 100 && this.kilometros != 0){
+      console.log("Kilometros menor que 100")
+      this.txtMensaje = ("¿Tienes todo listo?");
+    }
   }
 }
 
